@@ -140,8 +140,8 @@ function Footer() {
         </div>
       </div>
 
-      {/* <div>
-        <div className='mt-6 border-t-2 border-t-white/50 p-8 w-[90%]  flex justify-around'>
+      <div className='flex items-center justify-center'>
+        <div className='mt-6 border-t-2 border-t-white/50 pt-8 px-0 pb-2 md:p-8 w-[90%]  flex justify-end gap-7'>
           <button
           onClick={()=>{navigate("https://github.com/shk-ubd")}}
             className=" w-40 group flex justify-center items-center gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-4 py-4 border text-left text-gray-50 text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-sky-900 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse"
@@ -175,12 +175,8 @@ function Footer() {
             LinkedIn
           </button>
 
-
-
-
-
         </div>
-      </div> */}
+      </div>
 
     </section>
   )
