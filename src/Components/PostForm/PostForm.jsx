@@ -71,7 +71,7 @@ function PostForm({ post }) {
 
     return (
         <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
-            <div className="w-2/3 px-2">
+            <div className="w-full md:w-2/3 px-2">
                 <Input
                     label="Title :"
                     placeholder="Title"
@@ -89,7 +89,7 @@ function PostForm({ post }) {
                 />
                 <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
             </div>
-            <div className="w-1/3 px-2">
+            <div className="w-full md:w-1/3 px-2">
                 <Input
                     label="Featured Image :"
                     type="file"
@@ -112,7 +112,7 @@ function PostForm({ post }) {
                     className="mb-4"
                     {...register("status", { required: true })}
                 />
-                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
+                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className= {` ${post? "  hover:shadow-green-500 " : " hover:shadow-[#5ce1e6] cyan-button"} text-black shadow-sm hover:cursor-pointer duration-200 hover:drop-shadow-2xl rounded-lg w-full`} >
                     {post ? "Update" : "Submit"}
                 </Button>
             </div>
