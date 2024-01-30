@@ -11,6 +11,10 @@ function Header() {
 
   const [navOpen, setNavOpen] = useState(false)
 
+  const closeNavbar = () => {
+    setNavOpen(false)
+  }
+
   const toggleNavbar =() => {
     setNavOpen(!navOpen)
   }
@@ -26,11 +30,6 @@ function Header() {
       slug: "/login",
       active: !authStatus,
     },
-    // {
-    //   name: "Signup",
-    //   slug: "/signup",
-    //   active: !authStatus,
-    // },
     {
       name: "All Posts",
       slug: "/all-posts",
@@ -46,12 +45,12 @@ function Header() {
 
 
   return (
-    <header className='py-3 md:py-4 shadow  sticky top-0 z-99 px-0 md:px-10 w-screen bg-[#00040F]/30 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 md:bg-transparent md:backdrop-blur-0'>
+    <header className='py-3 md:py-4 shadow  sticky top-0 z-50 px-0 md:px-10 bg-[#00040F]/30 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20'>
       <Container>
         <nav className='flex justify-between flex-wrap items-center'>
 
           <div className="">
-            <Link to="/"> <Logo width='100px' /> </Link>
+            <Link to="/" onClick={closeNavbar}> <Logo width='100px' /> </Link>
           </div>
 
           <div className='md:hidden mr-4'>
@@ -61,13 +60,13 @@ function Header() {
           <ul className={` ml-auto md:w-auto md:items-center md:flex-row  md:flex     border-red-600 ${navOpen? "w-full flex flex-col items-center" : "hidden" }`}>
             {navItems.map((item) => item.active ? (
               <li key={item.name} className='my-2 md:my-0'>
-                <NavLink to={item.slug} className={({isActive}) =>`inline-bock px-6 py-2 duration-200  hover:text-white ${isActive ? 'text-white' : 'text-white/70' } `}>
+                <NavLink  onClick={closeNavbar} to={item.slug} className={({isActive}) =>`inline-bock px-6 py-2 duration-200  hover:text-white ${isActive ? 'text-white' : 'text-white/70' } `}>
                 {item.name}
                 </NavLink>
               </li>
             ) : null)}
             {
-              authStatus? <li> <LogoutBtn /> </li> : <li className='my-4 md:my-0'> <NavLink to={"/signup"}className="md:ml-4 py-2 px-5 text-black button-custom rounded-xl shadow-lg hover:scale-105 duration-200 hover:drop-shadow-2xl hover:shadow-[#666666] hover:cursor-pointer" > Signup </NavLink> </li>
+              authStatus? <li onClick={closeNavbar} > <LogoutBtn  /> </li> : <li className='my-4 md:my-0'> <NavLink  onClick={closeNavbar} to={"/signup"}className="md:ml-4 py-2 px-5 text-black button-custom rounded-xl shadow-lg hover:scale-105 duration-200 hover:drop-shadow-2xl hover:shadow-[#666666] hover:cursor-pointer" > Signup </NavLink> </li>
             }
           </ul>
 

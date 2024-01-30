@@ -16,7 +16,7 @@ function Home() {
 
      {
         return (
-            <div className="w-full py-8 my-4 text-center md:min-h-[90vh] ">
+            <div className="w-full md:py-8 mt-4 mb-8 text-center min-h-screen md:min-h-auto ">
                 <Container>
                     {/* <div className="flex flex-wrap">
                         <div className="p-2 w-full">
@@ -25,7 +25,7 @@ function Home() {
                             </h1>
                         </div>
                     </div> */}
-                    <div className="flex flex-col md:flex-row my-14 items-center justify-between">
+                    <div className="flex flex-col md:flex-row md:my-14 items-center justify-between">
 
                         <div className='md:w-[40%] flex flex-col items-center md:items-start '>
                             <h1 className=' text-3xl md:text-[52px] lg:text-[72px] hero-heading md:text-left text-center' >Welcome to the <span className='gradient-text' >BlogApp!</span>  </h1>

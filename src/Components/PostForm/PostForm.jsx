@@ -35,12 +35,16 @@ function PostForm({ post }) {
             if (file) {
                 const fileId = file.$id
                 data.featuredImage = fileId
-                let dbPost = await appwriteService.createPost({
-                    ...data,
-                    userId: userData.$id
-                })
-                if(dbPost){
-                    navigate(`/post/${dbPost.$id}`)
+                try {
+                    let dbPost = await appwriteService.createPost({
+                        ...data,
+                        userId: userData.$id
+                    })
+                    if(dbPost){
+                        navigate(`/post/${dbPost.$id}`)
+                    }
+                } catch (error) {
+                    prompt(error.message)
                 }
             }
 

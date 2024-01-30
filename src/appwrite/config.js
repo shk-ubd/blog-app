@@ -33,6 +33,7 @@ export class Service {
       );
     } catch (error) {
       console.log("Appwrite Service :: Create Post :: Error ::", error);
+      throw error
     }
   }
 
