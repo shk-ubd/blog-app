@@ -5,6 +5,7 @@ import authService from '../appwrite/auth'
 import { Logo, Button, Input } from "./index"
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
+import Loader from './index'
 
 
 function Login() {
@@ -12,8 +13,10 @@ function Login() {
     const dispatch = useDispatch()
     const { register, handleSubmit } = useForm()
     const [error, setError] = useState("")
+    const [loading, setLoading] = useState(true)
 
     const login = async (data) => {
+        setLoading(true)
         setError("")
         try {
             const session = await authService.login(data)
@@ -27,6 +30,8 @@ function Login() {
         } catch (error) {
             console.log(error);
             setError(error.message)
+        } finally {
+            setLoading(false)
         }
     }
     return (
@@ -72,10 +77,13 @@ function Login() {
                                 required: true,
                             })}
                         />
+                        {loading? 
+                        <div className='w-full grid place-items-center'> <Loader></Loader></div>
+                        :
                         <Button
                             type="submit"
                             className=" my-4 py-2 px-5 w-full text-black font-semibold button-custom rounded-xl shadow-lg   hover:cursor-pointer"
-                        >Sign in</Button>
+                        >Sign in</Button>}
                     </div>
                 </form>
             </div>

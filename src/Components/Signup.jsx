@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { login } from '../store/authSlice'
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
-import {Logo, Input, Button} from "./index"
+import {Logo, Input, Button, Loader} from "./index"
 
 function Signup() {
     const navigate = useNavigate()
@@ -74,11 +74,14 @@ function Signup() {
                                 required: true,
                             })}
                         />
+                        {loading? 
+                        <div className='w-full grid place-items-center'> <Loader></Loader></div>
+                        :
                         <Button type="submit"
                         className=" py-2 px-5 w-full text-black font-semibold button-custom rounded-xl shadow-lg   hover:cursor-pointer"
                         >
                             Create Account
-                        </Button>
+                        </Button>}
                     </div>
                 </form>
             </div>
