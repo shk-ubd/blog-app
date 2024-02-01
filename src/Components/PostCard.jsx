@@ -12,7 +12,7 @@ function PostCard({
     <Link to={`/post/${$id}`}>
         <div className='w-full card-hover rounded-xl p-4 h-full '>
             <div className='w-full justify-center mb-4 h-[80%] '>
-                <img src={appwriteService.getFilePreview(featuredImage)} alt={title} className='rounded-xl h-full object-cover' />
+                <img loading='lazy' src={appwriteService.getFilePreview(featuredImage)} alt={title} className='rounded-xl h-full object-cover' />
             </div>
             <h2 className='text-xl font-bold' >{title}</h2>
         </div>

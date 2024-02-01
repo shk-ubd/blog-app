@@ -10,7 +10,7 @@ function Footer() {
     <section className="overflow-hidden pt-10 pb-3 bg-[#00040F] ">
       <div className=" mx-auto max-w-7xl px-4">
         <div className="-m-6 flex flex-wrap">
-          <div className="w-full p-6 md:w-1/2 lg:w-5/12">
+          <div className="w-full p-6 md:w-full lg:w-5/12">
             <div className="flex h-full flex-col justify-between">
               <div className="mb-4 inline-flex items-center">
                 <Logo width="100px" />
@@ -22,7 +22,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="w-full p-6 md:w-1/2 lg:w-2/12">
+          <div className="w-full p-6 md:w-1/3 lg:w-2/12">
             <div className="h-full">
               <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-white">
                 Company
@@ -63,7 +63,7 @@ function Footer() {
               </ul>
             </div>
           </div>
-          <div className="w-full p-6 md:w-1/2 lg:w-2/12">
+          <div className="w-full p-6 md:w-1/3 lg:w-2/12">
             <div className="h-full">
               <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-white">
                 Support
@@ -104,7 +104,7 @@ function Footer() {
               </ul>
             </div>
           </div>
-          <div className="w-full p-6 md:w-1/2 lg:w-3/12">
+          <div className="w-full p-6 md:w-1/3 lg:w-3/12">
             <div className="h-full">
               <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-white">
                 Legals
@@ -141,7 +141,7 @@ function Footer() {
       </div>
 
       <div className='flex items-center justify-center'>
-        <div className='mt-6 border-t-2 border-t-white/50 pt-8 px-0 md:p-8 md:pb-2 w-[90%]  flex justify-evenly md:justify-end gap-7'>
+        <div className='mt-6 border-t-2 border-t-white/50 pt-8 px-0 md:p-8 md:pb-2 w-[90%]  flex justify-evenly lg:justify-end gap-7'>
           <button
           onClick={()=>{navigate("https://github.com/shk-ubd")}}
             className=" w-40 group flex justify-center items-center gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-4 py-4 border text-left text-gray-50 text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-sky-900 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse"
