@@ -5,7 +5,7 @@ import authService from '../appwrite/auth'
 import { Logo, Button, Input } from "./index"
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
-import Loader from './index'
+import {Loader} from './index'
 
 
 function Login() {
