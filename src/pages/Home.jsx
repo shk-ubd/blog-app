@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import appwriteService from '../appwrite/config'
+import React from 'react'
 import { Container,  Button } from '../Components'
 import { useSelector } from 'react-redux'
 import notebookImage from "/notebook.jpg"
 import { useNavigate } from 'react-router-dom'
 
 function Home() {
-    const [posts, setPosts] = useState([])
     const status = useSelector(state => state.auth.status)
 
     const navigate = useNavigate()
@@ -18,11 +16,6 @@ function Home() {
         }
     
     }
-    useEffect(() => {
-        appwriteService.getPosts().then(posts => {
-            if (posts) setPosts(posts.documents)
-        })
-    }, [])
 
      {
         return (
@@ -42,7 +35,7 @@ function Home() {
                             <p className='md:text-left mt-6 text-center px-5 md:px-0'>Your hub for interesting reads, insights, and more. Start your journey into the world of our blog app. Happy reading!</p>
                             <Button 
                             onClick={()=> navigateHome()} 
-                            className="my-4 mx-auto py-2 px-5 text-[#33BBCF] border-2 border-[#33BBCF]  rounded-xl shadow-lg duration-200  hover:cursor-pointer hover:bg-[#33BBCF] hover:text-white hover:scale-105 md:mx-10 md:my-6" 
+                            className="my-4 mx-auto py-2 px-5 text-[#33BBCF] border-2 border-[#33BBCF]  rounded-xl shadow-lg duration-200  hover:cursor-pointer hover:bg-[#33BBCF] hover:text-white hover:scale-105 md:mx-2 md:my-6" 
                             >
                                 {status? "See Posts":"Get Started"}
                             </Button>
