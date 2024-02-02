@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container,  Button } from '../Components'
 import { useSelector } from 'react-redux'
-import notebookImage from "/notebook.jpg"
+import notebookImage from "/notebook.webp"
 import { useNavigate } from 'react-router-dom'
 
 function Home() {
@@ -12,7 +12,7 @@ function Home() {
         if (status) {
             navigate('/all-posts')
         } else {
-            navigate('/login')
+            navigate('/signup')
         }
     
     }
@@ -21,13 +21,6 @@ function Home() {
         return (
             <div className="w-full md:py-8 mt-4 mb-8 text-center  md:min-h-auto ">
                 <Container>
-                    {/* <div className="flex flex-wrap">
-                        <div className="p-2 w-full">
-                            <h1 className="text-2xl mt-10 font-bold hover:text-gray-500">
-                                {status? "Nothing to Show" : "Login to Read Post"}
-                            </h1>
-                        </div>
-                    </div> */}
                     <div className="flex flex-col md:flex-row md:my-14 items-center justify-around">
 
                         <div className='md:w-[40%] flex flex-col items-center md:items-start '>
@@ -42,7 +35,7 @@ function Home() {
                         </div>
 
                         <div className='md:w-[40%] mt-10 md:mt-0 flex justify-center'>
-                            <div className='border-[5px] w-[80%] rounded-xl overflow-hidden border-white shadow-2xl shadow-white/30'>
+                            <div className='border-[5px] w-full max-w-[400px] rounded-xl overflow-hidden border-white shadow-2xl shadow-white/30'>
                                 <img loading="lazy" src={notebookImage} alt="notebookImage" />
                             </div>
                         </div>
@@ -51,19 +44,7 @@ function Home() {
             </div>
         )
     }
-    // return (
-    //     <div className='w-full py-8  md:min-h-[50vh]'>
-    //         <Container>
-    //             <div className='flex flex-wrap'>
-    //                 {posts.map((post) => (
-    //                     <div key={post.$id} className='p-2 md:w-1/4 w-full'>
-    //                         <PostCard {...post} />
-    //                     </div>
-    //                 ))}
-    //             </div>
-    //         </Container>
-    //     </div>
-    // )
+    
 }
 
 export default Home

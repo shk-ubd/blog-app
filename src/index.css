@@ -10,6 +10,7 @@
 
 body {
     background: #00040F;
+    scroll-behavior: smooth;
 }
 
 .hero-heading {

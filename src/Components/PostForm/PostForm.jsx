@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect } from 'react'
-import { RTE, Button, Input, Select } from "../index"
+import React, { useCallback, useEffect, useState } from 'react'
+import { RTE, Button, Input, Select, Loader } from "../index"
 import appwriteService from "../../appwrite/config"
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
@@ -18,8 +18,10 @@ function PostForm({ post }) {
 
     const navigate = useNavigate()
     const userData = useSelector(state => state.auth.userData)
+    const [loading, setLoading] = useState(false)
 
     const submit = async (data) => {
+        setLoading(true)
         if (post) {
             const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null
             if (file) {
@@ -29,7 +31,10 @@ function PostForm({ post }) {
                 ...data,
                 featuredImage: file ? file.$id : undefined
             })
-            if (dbPost) navigate(`/post/${post.$id}`)
+            if (dbPost) {
+                setLoading(false)
+                navigate(`/post/${post.$id}`)
+            }
         } else {
             const file = await appwriteService.uploadFile(data.image[0])
             if (file) {
@@ -45,7 +50,7 @@ function PostForm({ post }) {
                     }
                 } catch (error) {
                     prompt(error.message)
-                }
+                } finally {setLoading(false)}
             }
 
         }
@@ -116,9 +121,12 @@ function PostForm({ post }) {
                     className="mb-4"
                     {...register("status", { required: true })}
                 />
+                {loading? 
+                    <div className='w-full grid place-items-center'> <Loader></Loader></div>
+                    :
                 <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className= {` ${post? "  hover:shadow-green-500 " : " hover:shadow-[#5ce1e6] cyan-button"} text-black shadow-sm hover:cursor-pointer duration-200 hover:drop-shadow-2xl rounded-lg w-full`} >
                     {post ? "Update" : "Submit"}
-                </Button>
+                </Button>}
             </div>
         </form>
     )
