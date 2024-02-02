@@ -36,7 +36,7 @@ function Home() {
 
                         <div className='md:w-[40%] mt-10 md:mt-0 flex justify-center'>
                             <div className='border-[5px] w-full max-w-[400px] rounded-xl overflow-hidden border-white shadow-2xl shadow-white/30'>
-                                <img loading="lazy" src={notebookImage} alt="notebookImage" />
+                                <img  src={notebookImage} alt="notebookImage" />
                             </div>
                         </div>
                     </div>
