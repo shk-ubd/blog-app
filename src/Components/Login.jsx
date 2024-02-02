@@ -28,7 +28,6 @@ function Login() {
                 navigate("/all-posts")
             }
         } catch (error) {
-            console.log(error);
             setError(error.message)
         } finally {
             setLoading(false)

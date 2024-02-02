@@ -7,7 +7,6 @@ import closeIcon from "/icon-close.svg"
 
 function Header() {
   const authStatus = useSelector((state) => state.auth.status)
-  const navigate = useNavigate()
 
   const [navOpen, setNavOpen] = useState(false)
 

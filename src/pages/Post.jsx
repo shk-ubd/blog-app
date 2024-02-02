@@ -60,7 +60,6 @@ export default function Post() {
                     <h1 className="text-2xl font-bold">{post.title}</h1>
                 </div>
                 <div className="browser-css text-justify leading-relaxed">
-                    {console.log(post)}
                     {parse(String(post.content))}
                     </div>
             </Container>
