@@ -24,29 +24,29 @@ function Footer() {
           </div>
           <div className="w-full p-6 md:w-1/3 lg:w-2/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-white">
+              <h3 className="tracking-px mb-3 sm:mb-9  text-xs font-semibold uppercase text-white">
                 Company
               </h3>
               <ul>
-                <li className="mb-4">
+                <li className="mb-2 sm:mb-4">
                   <Link
-                    className=" text-base font-medium text-white/60 hover:text-white"
+                    className="text-sm sm:text-base font-medium text-white/60 hover:text-white"
                     to="/"
                   >
                     Features
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2 sm:mb-4">
                   <Link
-                    className=" text-base font-medium text-white/60  hover:text-white"
+                    className="text-sm sm:text-base font-medium text-white/60  hover:text-white"
                     to="/"
                   >
                     Pricing
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2 sm:mb-4">
                   <Link
-                    className=" text-base font-medium text-white/60 hover:text-white"
+                    className="text-sm sm:text-base font-medium text-white/60 hover:text-white"
                     to="/"
                   >
                     Affiliate Program
@@ -54,7 +54,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    className=" text-base font-medium text-white/60 hover:text-white"
+                    className="text-sm sm:text-base font-medium text-white/60 hover:text-white"
                     to="/"
                   >
                     Press Kit
@@ -65,29 +65,29 @@ function Footer() {
           </div>
           <div className="w-full p-6 md:w-1/3 lg:w-2/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-white">
+              <h3 className="tracking-px mb-3 sm:mb-9  text-xs font-semibold uppercase text-white">
                 Support
               </h3>
               <ul>
-                <li className="mb-4">
+                <li className="mb-2 sm:mb-4">
                   <Link
-                    className=" text-base font-medium text-white/60 hover:text-white"
+                    className="text-sm sm:text-base font-medium text-white/60 hover:text-white"
                     to="/"
                   >
                     Account
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2 sm:mb-4">
                   <Link
-                    className=" text-base font-medium text-white/60 hover:text-white"
+                    className="text-sm sm:text-base font-medium text-white/60 hover:text-white"
                     to="/"
                   >
                     Help
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2 sm:mb-4">
                   <Link
-                    className=" text-base font-medium text-white/60 hover:text-white"
+                    className="text-sm sm:text-base font-medium text-white/60 hover:text-white"
                     to="/"
                   >
                     Contact Us
@@ -95,7 +95,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    className=" text-base font-medium text-white/60 hover:text-white"
+                    className="text-sm sm:text-base font-medium text-white/60 hover:text-white"
                     to="/"
                   >
                     Customer Support
@@ -106,21 +106,21 @@ function Footer() {
           </div>
           <div className="w-full p-6 md:w-1/3 lg:w-3/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-white">
+              <h3 className="tracking-px mb-3 sm:mb-9  text-xs font-semibold uppercase text-white">
                 Legals
               </h3>
               <ul>
-                <li className="mb-4">
+                <li className="mb-2 sm:mb-4">
                   <Link
-                    className=" text-base font-medium text-white/60 hover:text-white"
+                    className="text-sm sm:text-base font-medium text-white/60 hover:text-white"
                     to="/"
                   >
                     Terms &amp; Conditions
                   </Link>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2 sm:mb-4">
                   <Link
-                    className=" text-base font-medium text-white/60 hover:text-white"
+                    className="text-sm sm:text-base font-medium text-white/60 hover:text-white"
                     to="/"
                   >
                     Privacy Policy
@@ -128,7 +128,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    className=" text-base font-medium text-white/60 hover:text-white"
+                    className="text-sm sm:text-base font-medium text-white/60 hover:text-white"
                     to="/"
                   >
                     Licensing
@@ -141,10 +141,10 @@ function Footer() {
       </div>
 
       <div className='flex items-center justify-center'>
-        <div className='mt-6 border-t-2 border-t-white/50 pt-8 px-0 md:p-8 md:pb-2 w-[90%]  flex justify-evenly lg:justify-end gap-7'>
+        <div className='mt-6 border-t-2 border-t-white/50 pt-8 px-0 md:pt-4 w-[90%]  flex justify-evenly lg:justify-end gap-7'>
           <button
           onClick={()=>{navigate("https://github.com/shk-ubd")}}
-            className=" w-40 group flex justify-center items-center gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-4 py-4 border text-left text-gray-50 text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-sky-900 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse"
+            className=" w-36 group flex justify-center items-center gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-4 py-4 border text-left text-gray-50 text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-sky-900 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse"
           >
             <svg
               className="w-6 h-6 fill-neutral-50"
@@ -166,7 +166,7 @@ function Footer() {
 
           <button
           onClick={()=>{navigate("https://www.linkedin.com/in/sheikh-ubaid/")}}
-            className="w-40 group flex justify-center items-center gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-4 py-4 border text-left text-gray-50 text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-sky-900 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse"
+            className="w-36 group flex justify-center items-center gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-4 py-4 border text-left text-gray-50 text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-sky-900 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse"
           >
             <svg 
               className="w-6 h-6 fill-neutral-50" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
